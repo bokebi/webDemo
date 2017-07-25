@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	var str = 'border-bottom-color';
+
+	function test(str){
+
+		var re = /-(\w)/g;
+
+		return str.replace(re,function($0,$1){
+
+			// console.log($0);	// -b -c
+			// console.log($1);	//b c
+			return $1.toUpperCase();
+		});
+	}
+
+	console.log(test(str));		//borderBottomColor
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

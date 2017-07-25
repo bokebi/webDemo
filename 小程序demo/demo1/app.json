@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/test/test",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/logs/index"
+    
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "个人主页",
+    "navigationBarTextStyle":"fff",
+    "backgroundTextStyle":"dark",
+    "enablePullDownRefresh": "true"
+  },
+   "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/logs/logs",
+      "text": "日志"
+    },{
+      "pagePath": "pages/test/test",
+      "text": "测试"
+    }],
+    "color": "#000000",
+    "selectedColor": "#f00",
+    "backgroundColor": "#eee",
+    "borderStyle": "black",
+    "position": "bottom"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

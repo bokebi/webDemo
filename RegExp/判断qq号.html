@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>判断qq号</title>
+	<script>
+	//^ : 正则的最开始位置，就代笔起始的意思
+	//$ : 正则的最后位置 , 就代笔结束的意思
+
+	window.onload = function(){
+
+		var aInput = document.getElementsByTagName('input');
+
+		var re = /^[1-9]\d{4,11}$/;
+
+		aInput[1].onclick = function(){
+
+			if(re.test(aInput[0].value)){
+				console.log('输入的是QQ号！');
+			}else{
+				console.log('输入的不是QQ号！');
+			}
+		}
+	}
+	</script>
+</head>
+<body>
+	<input type="text">
+	<input type="button" value="判断QQ">
+</body>
+</html>

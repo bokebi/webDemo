@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flex Shrink（收缩）</title>
+	<style>
+	/*
+	flex 是 flex-grow，flex-shrink 和 flex-basis 的缩写 – 所有这些都放在一起。
+	它的默认值是0（grow），1（shrink）和 auto（basis）。
+	*/
+	*{ margin: 0; padding: 0;}
+	#container{ width: 50%; padding: 0 20px; height: 500px; margin: 50px auto; background: #eee; display: flex; flex-direction: row; align-items: center;  }
+	#container div{ /*margin: 5px; width: 60px;*/ height: 60px; color: #fff; }
+	.div1{ background: red; flex: 2 1 300px;}
+	.div2{ background: orange; flex: 1 2 300px;}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div class="div1">1</div>
+		<div class="div2">2</div>
+	</div>
+</body>
+</html>

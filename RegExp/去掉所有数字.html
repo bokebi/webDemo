@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	var str = 'abcD123efgH456ijkLM789Nop0R';
+	
+	var re = /\d/g;	//匹配到所有大写字母
+
+	str = str.replace(re , '');	//将匹配到的字符串替换成空字符串
+
+	console.log(str);	//abcDefgHijkLMNopR
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

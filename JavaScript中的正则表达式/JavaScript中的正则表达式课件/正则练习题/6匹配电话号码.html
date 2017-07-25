@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script>
+// 问号可以表示重复前面内容的0次或一次，也就是要么不出现，要么出现一次。
+
+//座机或者手机  010-12345678  13888888888
+
+var str = '010-12345678';
+
+var re = /^((\d{3,4}-)?\d{7,8})$|^(1\d{2,10})$/;
+
+alert( re.test(str) );
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

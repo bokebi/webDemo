@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+</head>
+<body>
+	<script>
+	//search : 正则去匹配字符串 , 如果匹配成功，就返回匹配成功的位置，如果匹配失败就返回 -1
+
+	//search的写法 : 字符串.search(正则)
+
+	//正则中的默认 : 是区分大小写的 
+
+	//如果不区分大小写的话，在正则的最后加标识 i 
+
+	var str = 'abc123';
+
+	var re = /C/i;	//匹配字符C,不区分大小写
+
+	var re2 = /e/
+
+	console.log(str.search(re));	// 2
+	console.log(str.search(re2));	// -1
+
+	</script>
+</body>
+</html>

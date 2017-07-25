@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>flex-grow</title>
+	<style>
+	/*
+	Flex Grow（拉伸）
+	flex-grow 只和比例相关
+	就像 flex-basis 一样，flex-grow 只适用于主轴(main axis)。我们的矩形子元素只会影响宽度，除非我们将 flex-direction设置为column
+	*/
+	*{ margin: 0; padding: 0;}
+	#container{ width: 800px; height: 500px; margin: 50px auto; background: #eee; display: flex; flex-direction: row; align-items: center;  }
+	#container div{ margin: 5px; width: 60px; height: 60px; color: #fff;}
+	.div1{ background: red; flex-grow: 1;}
+	.div2{ background: orange; flex-grow: 3;}
+	.div3{ background: blue; flex-grow: 1;}
+	.div4{ background: green; flex-grow: 1;}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div class="div1">1</div>
+		<div class="div2">2</div>
+		<div class="div3" id="self">3</div>
+		<div class="div4">4</div>
+	</div>
+</body>
+</html>

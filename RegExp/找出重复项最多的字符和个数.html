@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>找出重复项最多的字符和个数</title>
+	<script>
+		// 正则表达式中的小括号"()"。是代表分组的意思。 如果再其后面出现\1则是代表与第一个小括号中要匹配的内容相同。
+
+		var str = 'assssjdssskssalsssdkjsssdss';
+
+		var arr = str.split('');	//将字符串拆分成数组
+
+		// console.log(arr);
+
+		str = arr.sort().join('');	//将数组排序并拼接成字符串
+
+		console.log(str);	//aadddjjkklsssssssssssssssss
+
+		var value = '';		
+		var index = 0;
+
+		var re = /(\w)\1+/g;
+
+		str.replace(re,function($0,$1){
+			
+			console.log($0);	//aa ddd jj kk ssssssssssssssss
+			
+			if(index<$0.length){
+				index = $0.length;
+				value = $1;
+			}
+			
+		});
+
+		console.log('最多的字符:'+value+',重复的次数:'+index);	// s 17
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

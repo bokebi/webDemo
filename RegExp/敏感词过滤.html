@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>replace</title>
+</head>
+<body>
+	<script>
+	//| : 或的意思
+
+	//replace : 第二个参数：可以是字符串，也可以是一个回调函数
+
+	//菲称仁爱礁附近17艘中国船均在菲军监视之下
+
+	window.onload = function(){
+		var aT = document.getElementsByTagName('textarea');
+		var oInput = document.getElementById('input1');
+
+		re = /菲称|中国|菲军/g;
+
+		oInput.onclick = function(){
+
+			// 方法一
+			// aT[1].value = aT[0].value.replace(re,'*');
+
+			// 方法二
+			aT[1].value = aT[0].value.replace(re,function(str){
+				
+				//函数的第一个参数：就是匹配成功的字符	
+				console.log(str);
+				
+				var result = '';
+
+				for (var i = 0; i < str.length; i++) {
+					result += '*';
+				};
+				return result;
+			});
+		};
+
+	}
+	</script>
+
+	替换前<br />
+	<textarea>
+	</textarea><br />
+	替换后<br />
+	<textarea>
+	</textarea><br />
+	<input type="button" value="确定" id="input1" />
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>去掉前后空格</title>
+	<script>
+
+		// 去掉字符串前后空格
+		var str = ' hello ';
+
+		console.log('('+trim(str)+')')
+
+		function trim(str){
+
+			var re = /^\s+|\s+$/g;
+
+			return str.replace(re, '');
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

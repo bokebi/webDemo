@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>flex-direction</title>
+	<style>
+	*{ margin: 0; padding: 0;}
+	/* 
+		flex-direction:改变横(主)轴排列方向：
+		column(纵向)、行(横向)
+		row-reverse(横反向)
+		column-reverse(纵反向)
+	 */
+	#container{ width: 800px; height: 500px; margin: 50px auto; background: #eee; display: flex; flex-direction: column; }
+	#container div{ margin: 5px; color: #fff;}
+	.div1{ width: 50px; height: 60px; background: red;}
+	.div2{ width: 60px; height: 50px; background: orange;}
+	.div3{ width: 60px; height: 60px; background: blue;}
+	.div4{ width: 100px; height: 60px; background: green;}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div class="div1">1</div>
+		<div class="div2">2</div>
+		<div class="div3">3</div>
+		<div class="div4">4</div>
+	</div>
+</body>
+</html>

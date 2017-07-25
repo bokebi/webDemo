@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<ul id="ul">
+		<li>11</li>
+		<li>22</li>
+		<li>33</li>
+		<li>44</li>
+	</ul>
+<script type="text/javascript">
+	/*
+		某个元素下个第一个子节点：
+			firstElementChild
+		某个元素下个最后一个子节点：
+			lastElementChild
+	*/
+	// var ul = document.getElementById('ul');
+	
+	// console.log(ul.lastElementChild);
+	
+	//console.log(ul.firstElementChild);
+
+	window.onload = function(){
+
+		var oUl = document.getElementById('ul');
+
+		console.log(oUl.firstElementChild);	//<li>11</li>
+		console.log(oUl.lastElementChild);	//<li>44</li>
+	}
+</script>
+</body>
+</html>

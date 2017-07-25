@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" name="" id="btn" value="点击添加" />
+	<ul id="ul">
+		<!--<li>0</li>-->
+	</ul>
+<script type="text/javascript">
+	var btn = document.getElementById('btn');
+	var ul = document.getElementById('ul');
+	var num = 0;
+	
+	/*
+		document.createElement('标签的名字');  //创建元素
+		
+		插入元素：（向父级末尾添加一个元素）
+			parentNode.appendChild(childNode)
+		
+			
+		插入元素：（向父级中的某个元素前插入元素）
+		parentNode.insertBefore(新添加的元素,已有的元素)
+			
+			特性：
+				如果第二个参数为假的，那么会将某个元素添加到父元素的末位。
+		
+	*/
+
+
+	window.onload = function(){
+		
+		var oBtn = document.getElementById('btn');
+		var oUl = document.getElementById('ul');
+		var iNow = 0;
+		var aLi = oUl.getElementsByTagName('li');
+		
+		oBtn.onclick = function(){
+			var oLi = document.createElement('li');
+			oLi.innerHTML = iNow ++ ;
+			
+			// 方法一
+			if(!aLi.length){
+				oUl.appendChild(oLi);
+			}else{
+				oUl.insertBefore(oLi , aLi[0]);
+			}
+			
+			// 方法二
+			// oUl.insertBefore(oLi , aLi[0]);
+			// oUl.insertBefore(oLi , null);	//第二个参数为假，相当于appendChild
+			console.log(iNow);
+		}
+	}
+</script>
+</body>
+</html>

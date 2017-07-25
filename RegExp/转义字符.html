@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>字符类</title>
+	<script>
+		//.  :  任意字符
+		//\. : 真正的点
+
+		var str = 'a.c';
+
+		var re = /a\.c/;
+
+		console.log(re.test(str));	//true
+
+		var str2 = 'abcdef';
+
+		var re2 = /a.cd/;
+
+		console.log(re2.test(str2));	//true
+
+		//\b : 独立的部分  匹配单词边界，不匹配任何字符 （ 起始，结束，空格 ）
+		//\B : 非独立的部分
+
+		var str3 = 'onetwo';
+		var str4 = 'one two';
+
+		var re3 = /one\b/;
+
+		console.log( re3.test(str3) );	//false
+		console.log( re3.test(str4) );	//true
+
+		/*
+			\b说明：
+			我要从一堆原始数据中查找55这个数字,包括三种情况:
+			假设原始数据是: 123512,a55bcd,55abc,abc55,1235bs,asdfc,55,
+			1.要求:只有55,前后都不能有其他字符,比如a55bcd,55abc,abc55都是不行的
+			  这种情况下,用\b55\b,\b就相当于一个停止分界线,告诉电脑55的前面和后面都不允许带字符
+			2.要求:以55开头,后面允许带字符比如55abc,55,但是a55bcd是不允许的
+			  这种情况下,用\b55,这里只有55前面有停止分界线\b,告诉电脑前面不允许带字符,后面没有停止分界线,后面可以带字符
+			3.要求:以55结尾,前面允许带字符,后面不允许.比如abc55是允许的,但是a55bcd是不允许的
+			  这种情况下,用55\b,这里是有55后面有停止分界线,告诉电脑后面不允许带字符,前面没有停止分界线,是允许   带字符的
+		*/
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

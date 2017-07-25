@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script>
+
+var str = 'haj123sdk54hask33dkhalsd879';
+
+
+function findNum(str){
+	
+	var arr = [];
+	
+	var tmp = '';
+	
+	//循环遍历str所有字符
+	for(var i=0;i<str.length;i++){
+		// 判断是否>=0同时小于等于9，即判断是否是数字类型
+		if( str.charAt(i)<='9' && str.charAt(i)>='0' ){
+			// 如果满足条件，就将它们累加到临时变量tmp中
+			tmp += str.charAt(i);
+		}
+		// 否则就是非数字
+		else{
+			// 如果存在tmp
+			if(tmp){
+				// 将tmp添加到数组arr中
+				arr.push(tmp);
+				// 然后置空tmp
+				tmp = '';
+			}
+		}
+	}
+	
+	// str尾部有数字的情况做个判断
+	if(tmp){
+		arr.push(tmp);
+		tmp = '';
+	}
+	
+	
+	return arr;
+	
+}
+
+alert( findNum(str) );   //[123,54,33,879]
+
+</script>
+</head>
+
+<body>
+</body>
+</html>
