@@ -4,7 +4,7 @@
 <view>{{message}}</view>
 
 <!--列表渲染-->
-<view wx:for="{{array}}">{{item}}</view>
+<!--<view wx:for="{{array}}">{{item}}</view>-->
 
 <!--条件渲染-->
 <view wx:if="{{view == 'WEBVIEW'}}">WEBVIEW</view>
@@ -45,7 +45,7 @@
 <view>{{object.key}} {{arr[0]}}</view>
 
 <!--组合-->
-<view wx:for="{{[zero,1,2,3,4]}}">{{item}}</view>       <!-- [0,1,2,3,4] -->
+<!--<view wx:for="{{[zero,1,2,3,4]}}">{{item}}</view> -->        <!-- [0,1,2,3,4] --> 
 
 <!--对象-->
 <template is="objectCombine" data="{{obj1: a, obj2: b}}"></template>    <!-- {for: 1, bar: 2} -->
@@ -53,22 +53,40 @@
 <template is="objectCombine" data="{{...obj1, ...obj2, e: 5}}"></template>  <!-- {a: 1, b: 2, c: 3, d: 4, e: 5} -->
 
 <!--列表渲染-->
-<view wx:for="{{array1}}">
+<!--<view wx:for="{{array1}}">
     {{index}} : {{item.message}}
-</view>
+</view>-->
 
 <!--使用 wx:for-item 可以指定数组当前元素的变量名， 使用 wx:for-index 可以指定数组当前下标的变量名：-->
 <view wx:for="{{array2}}" wx:for-index="sIndex" wx:for-item="sItem">
 {{sIndex}} : {{sItem.message}}
 </view>
 
-<view wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:for-item="i">
+<!--<view wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:for-item="i">
     <view wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:for-item="j">
         <view wx:if="{{i <= j}}">
         {{i}} * {{j}} = {{i * j}}
         </view>
     </view>
-</view>
+</view>-->
+
+<!--<block wx:for="{{[11,12,13]}}">
+    <view>{{index}}:{{item}}</view>
+</block>-->
+
+<template name="odd">
+    <view>odd</view>
+</template>
+<template name="even">
+    <view>even</view>
+</template>
+
+<block wx:for="{{[1,2,3,4]}}">
+    <template is="{{item % 2 == 0 ? 'even' : 'odd'}}"></template>
+</block>
+
+<!--事件使用方式-->
+<view id="tapTest" data-hi="WeChat" bindtap="tapName"> 点击试试 </view>
 
 
 
