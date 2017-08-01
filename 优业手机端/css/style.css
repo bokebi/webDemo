@@ -1,0 +1,163 @@
+body{ background: #f7f7f7;}
+.red{ color: #f00!important; }
+.gray{ color: #cacaca!important; }
+.orange{ color: #eb3d00!important; }
+.tdl{ text-decoration: line-through; }
+
+/*顶部*/ 
+.top{ height: 2.0rem; background: #fff; border-bottom: 1px solid #dfdedf;} 
+.logo_l{ float: left; padding-left: 1.1rem; } 
+.logo_l img{ width: 1.62rem; height: 2.0rem; } 
+.tel_r{ float: right; padding-right: 0.5rem; padding-top: 0.7rem; color: #eb3d00; font-size: 16px;}
+.tel_icon{ display: inline-block; width: 0.64rem; height: 0.56rem; background: url(../images/dh_icon.gif) no-repeat; background-size: cover; }
+
+.rz_box{ height: 1.8rem; background: #fff; border-bottom: 1px solid #dfdedf; }
+.rz_box ul{ display: -webkit-flex; display: flex; -webkit-flex-wrap:wrap; flex-wrap:wrap; -webkit-justify-content:space-around; justify-content:space-around; -webkit-align-items:center; align-items:center; padding-top: 0.44rem}
+.rz_box li span{ display: inline-block; position: relative; top: 4px;}
+.zz_icon{ width: 0.72rem; height: 0.72rem; background: url(../images/zzrz_icon.gif) no-repeat; background-size: cover; }
+.zr_icon{ width: 0.68rem; height: 0.68rem; background: url(../images/zrfw_icon.gif) no-repeat; background-size: cover; }
+.bl_icon{ width: 0.68rem; height: 0.68rem; background: url(../images/bl_icon.gif) no-repeat; background-size: cover; }
+
+/*核名*/
+.hm_bg{ height: 10.76rem; padding: 1.0rem 1.12rem 0; background: url(../images/hm_bg.jpg) no-repeat; }
+.hm_bg hgroup{ text-align: center; color: #fff; }
+.hm_bg hgroup h3{ font-size: 1.0rem; padding-bottom: 0.4rem; }
+.hm_bg hgroup h4{ font-size: 0.5rem; padding-bottom: 0.8rem;}
+.hm_form li{ padding-bottom: 0.5rem; }
+.hm_form li .input_wbk{ width: 90%; padding: 0 5%; height: 1.6rem; background: #fff; border: none; }
+.input_btn{ width: 100%; height: 1.6rem; text-align: center; background: #f4b620; border: none; color: #fff; font-size: 0.6rem; cursor: pointer;}
+.hm_form p{ text-align: center; color: #fff; }
+.hm_form p span{ color: #f4b620; }
+
+/*成交动态*/
+.deal_box{ background: #fff; }
+.deal_one{ height: 1.4rem; background: #f4b620; color: #fff; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center;}
+.deal_one a{ color: #fff; font-size: 0.56rem; padding-left: 0.5rem;}
+.deal_two{ height: 2.0rem; border-bottom: 1px solid #dfdedf; display: -webkit-flex; display: flex; align-items: center; -webkit-justify-content: center; justify-content: center; font-size: 0.6rem;}
+
+/*精选套餐*/
+.jxtc_box{ background: #fff; padding: 0.6rem 1% 0.52rem; margin-bottom: 0.44rem; border-bottom: 1px solid #dfdedf; }
+.jxtc_box h3{ font-size: 0.6rem; padding: 0 0.5rem; }
+.jxtc_box h3 span{ display: inline-block; width: 0.16rem; height: 0.6rem; background: #eb3d00; margin-right: 0.2rem; position: relative; top: 0.08rem; }
+.jxtc_show{ }
+.jxtc_item{ float: left; width: 40%; margin: 2%; height: 2.9rem; padding: 0.4rem 3%; background: #ffebe4; }
+.jxtc_item h4{ font-size: 0.6rem; font-weight: normal; }
+.jxtc_ms{ font-size: 0.48rem; padding: 0.3rem 0 0.5rem; }
+.jxtc_item span:nth-of-type(1){ margin-right: 1.2rem; }
+
+/*五大业务*/
+.five_business{ background: #fff; }
+.bus_tt{ text-align: center; font-size: 0.8rem; font-weight: normal; padding: 0.4rem 0 0.8rem; }
+.bus_cont{ display: -webkit-flex; display: flex; -webkit-flex-wrap: wrap; flex-wrap: wrap; -webkit-justify-content: center; justify-content: center; text-align: center;  }
+.business_item{ width: 3.8rem; padding: 0 0.6rem; margin-bottom: 0.6rem; }
+.business_item:nth-of-type(4) ,.business_item:nth-of-type(5){ width: 5.9rem; }
+.bus_item1 img{ width: 1.2rem; height: 1.34rem; }
+.bus_item2 img{ width: 1.3rem; height: 1.28rem; }
+.bus_item3 img{ width: 1.0rem; height: 1.28rem; }
+.bus_item4 img{ width: 1.56rem; height: 1.12rem; }
+.bus_item5 img{ width: 1.26rem; height: 1.16rem; }
+.business_item .bus_bt{ font-size: 0.6rem; padding: 0.30rem 0; }
+.business_item .bus_ys ,.business_item .bus_ms{ font-size: 0.6rem; color: #909090; }
+
+/*七个步骤*/
+.step_bg{ width: 100%; height: auto; background: url(../images/step_bg.jpg) center top no-repeat; background-size: 100%; border-top: 1px solid #dfdedf; border-bottom: 1px solid #dfdedf; }
+.step_box{ padding: 0.5rem 0.5rem 0 0.5rem; color: #fff; }
+.step_tt{ text-align: center; }
+.step_tt h3{ font-size: 0.7rem; padding-bottom: 0.3rem;}
+.step_tt p{ font-size: 0.5rem; padding-bottom: 0.2rem; }
+
+.step_item{ padding: 0.48rem 0; border-bottom: 1px solid #a1a1a1; display: -webkit-flex; display: flex; }
+.step_item:last-of-type{ border-bottom: none; }
+.step_img img{ width: 2.6rem; height: 2.6rem; border-radius: 50%;  margin-left: 1.32rem; margin-right: 0.8rem; border: 1px solid #fff;}
+.step_rwz{ font-size: 0.6rem; }
+.step_rwz h4{ font-weight: normal; padding-top: 0.5rem; padding-bottom: 0.1rem; }
+
+/*注意事项*/
+.attention{	padding: 0.52rem 0.5rem 0 0.5rem;}
+.attention h3{ font-size: 0.6rem; padding-bottom: 0.32rem; text-align: center;}
+.attention li{ padding-bottom: 0.8rem; display: -webkit-flex; display: flex; }
+.attention li .atten_no{ display: inline-table; width: 1.8rem; height: 1.8rem; background: #eb3d00; color: #fff; text-align: center; line-height: 1.8rem; border-radius: 50%; font-size: 0.76rem; font-weight: bold; }
+.attention li p{ margin-left: 0.6rem; font-size: 0.54rem; line-height: 1.6;}
+
+/*我们的优势*/
+.advantage_bt{ font-size: 0.7rem; font-weight: normal; padding-bottom: 0.6rem; text-align: center; }
+.advantage_nr{ display: -webkit-flex; display: flex;  }
+.advantage_lnr ,.advantage_rnr{ width: 50%; text-align: center; line-height: 1.2rem; font-size: 0.56rem;}
+.advantage_lnr li{ background: #ed4e00; border-bottom: 1px solid #e24b00; color: #fff;}
+.advantage_rnr li{ background: #dadada; border-bottom: 1px solid #d1d1d1; }
+.true_icon{ background: #ed4e00; padding-top: 0.3rem; }
+.false_icon{ background: #dadada; padding-top: 0.3rem; }
+.true_icon img ,.false_icon img{ width: 1.02rem; height: 1.02rem; }
+
+/*公司资料*/
+.company_data{ background: #fff; padding-top: 0.56rem; }
+.data_bt{ font-size: 0.7rem; font-weight: normal; text-align: center; padding-bottom: 1.0rem; }
+.data_ms{ display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content:space-between; padding: 0.3rem 0.5rem 0;}
+.data_wz li { padding-bottom: 0.4rem; }
+.data_pic img{ width: 5.4rem; height: 2.4rem;  }
+
+/*常见问题*/
+.question{ padding: 0.5rem 0.5rem 0; }
+.question h3{ font-size: 0.7rem; font-weight: normal; text-align: center; padding-bottom: 0.6rem;}
+.question li{ padding-bottom: 0.7rem; }
+.question li h5{ font-size: 0.6rem; color: #ed4e00; font-weight: normal; padding-bottom: 0.5rem; }
+.question li p{ font-size: 0.6rem; }
+
+/*底部*/
+.seprate{ clear: both; height: 2.4rem; }
+.foot_bg{ background: #000; color: #fff; position: fixed; left: 0; right: 0; bottom: 0; height: 2.4rem; }
+.foot_box ul{ display: -webkit-flex; display: flex; justify-content: space-around; }
+.foot_box li a{ display: inline-block; text-align: center; padding-top: 0.4rem; }
+.foot_box li a img{ width: 0.8rem; height: 1.0rem; }
+.foot_box li a p{ color: #fff; }
+
+/*套餐详情页*/
+.top_bt{ width: 100%; height: 2.0rem; text-align: center; background: #eb3d00; color: #fff; font-size: 0.68rem; font-weight: normal; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; -webkit-justify-content: center; justify-content: center; position: relative;}
+.back_icon{ position: absolute; left: 0.4rem; }
+.back_icon img{ width: 1rem; height: 1rem; }
+.tc_info{ margin-top: 0.4rem; background: #fff; padding: 0.4rem; }
+.tc_bt{ font-size: 0.7rem; font-weight: normal; }
+.tc_bt span.tc_line ,.ser_bt span.tc_line{ width: 0.09rem; height: 0.7rem; background: #eb3d00; display: inline-block; margin-right: 0.2rem; position: relative; top: 0.09rem; }
+.tc_sm{ font-size: 0.66rem; color: #888; padding: 0.4rem 0; }
+.tc_price{ font-size: 0.66rem; color: #db3434; }
+
+.ser_detail{ margin-top: 0.4rem; background: #fff; }
+.ser_bt{ padding: 0.4rem; font-size: 0.66rem; font-weight: normal; border-bottom: 1px solid #eee; }
+.ser_nr{ padding: 0.4rem; }
+.ser_nr dl{ padding-top: 0.64rem; }
+.ser_nr dt{ font-size: 0.66rem; padding-bottom: 0.4rem; }
+.ser_nr dd{ font-size: 0.6rem; padding-bottom: 0.24rem; color: #888; }
+
+/*立即咨询*/
+.tc_seprate{ clear: both; height: 1.7rem; }
+.advisory{ position: fixed; left: 2.0rem; right: 2.0rem; bottom: 0.38rem; background: #fff; }
+.advisory_btn{ width: 100%; height: 1.58rem; line-height: 1.58rem; font-size: 0.7rem; background: #eb3d00; color: #fff; border-radius: 5px; text-align: center; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
