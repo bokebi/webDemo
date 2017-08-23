@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
+	<meta name="format-detection" content="telephone=no">
+	<title>客户详情</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header class="header_tt">
+		<span onClick="javascript:history.back(-1);" class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><h1>客户详情</h1>
+	</header>
+
+	<div class="form_box">
+		<form action="" method="post">
+			<div class="form_info1 clearfix">
+				<div class="formItem clearfix">
+					<label>客户姓名</label>
+					<input type="text" class="form_wbk">
+				</div>
+				<div class="formItem clearfix">
+					<label>手机号码</label>
+					<input type="tel" class="form_wbk">
+				</div>
+				<div class="formItem clearfix">
+					<label>QQ</label>
+					<input type="tel" class="form_wbk">
+				</div>
+				<div class="formItem clearfix">
+					<label>微信</label>
+					<input type="text" class="form_wbk">
+				</div>
+				<div class="formItem clearfix">
+					<label>推荐人</label>
+					<input type="text" class="form_wbk">
+				</div>
+				<div class="formItem clearfix">
+					<label for="wx">地区</label>
+					<select name="" id="">
+						<option value="深圳">深圳</option>
+						<option value="北京">北京</option>
+						<option value="上海">上海</option>
+						<option value="广州">广州</option>
+					</select>
+				</div>
+			</div>
+			<div class="remarks">
+				<p>备注</p>
+				<textarea class="remarks_wby" placeholder="请输入备注信息……"></textarea>
+			</div>
+			<div class="follow_up">
+				<p>更进内容</p><span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+				<div class="gjnr">
+					<textarea class="remarks_wby" placeholder="请输入跟进内容……"></textarea>
+				</div>
+			</div>
+			<div class="group_btns">
+				<div class="upload_btn">
+					<a href="javascript:;"><span class="glyphicon glyphicon-open" aria-hidden="true"></span>上传附件</a>
+				</div>
+				<div class="control_btn">
+					<a class="save_btn" href="javascript:;">保存</a>
+					<a class="cancel_btn" href="javascript:;">取消</a>
+				</div>
+			</div>
+		</form>
+
+		<div class="other_info">
+			<p>1. | <a href="#">管理员</a> | <a href="#">修改流程节点</a> | <a href="#" class="blue">修改流程节点</a></p>
+			<ul class="other_list">
+				<li><time>2017-08-21</time><a href="#">设置客户流程节点为核名</a></li>
+				<li><time>2017-08-21</time><a href="#">设置客户流程节点为核名</a></li>
+				<li><time>2017-08-21</time><a href="#">设置客户流程节点为核名</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<script src="js/jquery-1.10.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

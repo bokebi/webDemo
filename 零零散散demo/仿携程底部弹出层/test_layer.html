@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>底部弹出层</title>
+	<style>
+	/*弹出层样式*/
+	*{ margin: 0; padding: 0;}
+	ul,li{ list-style: none;}
+	a{ color: #333; text-decoration: none;}
+	.fl_open_wrap { display: none; position: fixed; z-index: 99999; left: 0; bottom: 55px; width: 127px; height: 136px; overflow: hidden; }
+	.fl_open_wrap .fl_open_wrap_cntr { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: url(images/fl_open_wrap.png) no-repeat; cursor: pointer; }
+	.fl_pop_wrap{    display: -none; position: fixed; z-index: 99998; left: 0; bottom: 0; width: 100%; height: 196px; overflow: hidden;}
+	.fl_pop_wrap .fl_pop_wrap_cntr {position: absolute; left: 0; bottom: 0; width: 100%; }
+	.fl_pop_wrap .fl_pop_wrap_cntr_bg { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: #051223; opacity: 0.9; filter: alpha(opacity=90); z-index: -200; }
+	.fl_pop_wrap .fl_pop_box { position: relative; width: 980px; height: 176px; margin: auto; font-size: 12px; font-weight: 1.5; color: #333; }
+	.fl_pop_wrap .fl_pop_box .fl_pop_pic { position: absolute; left: 0; bottom: 0; }
+	.fl_pop_wrap .fl_pop_cnt { position: absolute; top: 0; right: 42px; height: 100%; padding: 0 2px 0 16px; color: #fff; }
+	.fl_pop_wrap .fl_pop_cnt_bg { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: #fff; opacity: 0.2; filter: alpha(opacity=20); z-index: -100; }
+	.fl_pop_wrap .fl_pop_form {float: left; width: 290px; margin: 14px 20px 0 0; }
+	.fl_pop_wrap .fl_pop_form .fl_pop_ttl { margin-bottom: 12px; font-size: 18px; line-height: 1.6; }
+	.fl_pop_wrap .fl_pop_items {position: relative; margin-top: 5px; height: 100px; }
+	.fl_pop_wrap .fl_pop_items input {border: none; padding: 0 10px; height: 38px; font-size: 16px; line-height: 38px; color: #333; outline: none; }
+	.fl_pop_wrap .fl_pop_items .fl_pop_input_phone {position: absolute; left: 0; top: 0; width: 270px; }
+	.fl_pop_wrap .fl_pop_items .fl_pop_submit {position: absolute; left: 0; top: 44px; width: 280px; height: 38px; }
+	.fl_pop_wrap .fl_pop_items input {border: none; padding: 0 10px; height: 38px; font-size: 16px; line-height: 38px; color: #333; outline: none; }
+	.fl_pop_wrap .fl_pop_items .fl_pop_input_secode {position: absolute; left: 0; top: 0; width: 110px; border-right: 1px solid #ddd; }
+	.fl_pop_wrap .fl_pop_items .float_pop_secode {position: absolute; left: 131px; top: 0; width: 70px; overflow: hidden; }
+	.fl_pop_wrap .fl_pop_btn_normal {position: absolute; left: 205px; top: 0; width: 85px; height: 38px; line-height: 38px; text-align: center; background: #f90; color: #fff; font-size: 17px; cursor: pointer; }
+
+	.fl_pop_wrap .fl_pop_qrcode { position: relative; float: left; width: 115px; margin: 20px 14px 0 0; }
+	.fl_pop_wrap .fl_pop_qrcode .fl_pop_hint {line-height: 1.5; text-align: center; }
+	#popfloating_float_img {width: 103px; height: 103px; position: absolute; top: 6px; left: 6px; z-index: 10; }
+	#popfloating_float_img img { display: block; width: 103px; height: 103px; margin: 0!important; }
+	
+	.fl_pop_wrap .fl_wrap_close { position: absolute; top: 10px; right: -4px; font-size: 38px; line-height: 1.2; font-family: Simsun; color: #9aa1a8; outline: 0 none; }
+	</style>
+</head>
+<body>
+	<div class="fl_open_wrap" style="display: block;">
+		<div class="fl_open_wrap_cntr" style="left: 0%;"></div>
+	</div>
+
+	<div class="fl_pop_wrap" style="display: none;">
+		<div class="fl_pop_wrap_cntr" style="left: -100%;">
+			<div class="fl_pop_wrap_cntr_bg"></div>
+			<div class="fl_pop_box">
+				<div class="fl_pop_pic">
+					<img src="images/lvyou_480x194.png">
+				</div>
+				<div class="fl_pop_cnt">
+					<div class="fl_pop_cnt_bg"></div>
+					<div class="fl_pop_form">
+						<div class="fl_pop_ttl">填写手机号，短信获取注册公司材料及流程</div>
+						<div class="fl_pop_items">
+							<input type="text" placeholder="请输入11位手机号" class="fl_pop_input_phone">
+							<div class="fl_pop_submit">
+								<input type="text" placeholder="动态验证码" value="" class="fl_pop_input_secode">
+								<div class="float_pop_secode">
+									<img width="90" height="38" src="data:image/png;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAeAEYDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDvd7D7yH6jmlEiHvj2PFVNX1S30XSLrUrokQ28ZdsdT6Ae5OB+NcEdd1PVYFvf+E68PaS7jclivkzBQeiu7NnPrgVrzQe6t6f8E4fY4qn/AA6nN/iX6xt+T/U9KorzHwzq2s+MtQWWHUDYxxWQjuvIJZS/mMNyA8ZIXqc4HStkW+oeG/FOk28er3uoWuoGRJIbyTeylV3blOOK7/7Oi1ZVFzOPNZp7WvvstNdy1iKkVerD7ndfkn+B2tFea+HLfXvFEGoXc+u3tlpU99M8JtnPnMu7aFDnOxBjgAckn2rD/wCEyutFv73w5P4hmW2W9eMancIZpoolUZUYByxJwCRxz7Y81wkldrQ0p4mlUm4Rl7y3XX7j2asDUPF1jZXklpDbX2oTw/65bG3Mvlf7x4ArzeTxha6PqET6B4q1LWEmimWeG/3tsYISjKWVcfMOgrprG48S+H/C8N3baVYiyhi864jmkb7TJxl3OOATycHJA47V6WBwUasPaTs9bJOSjd+v3ffuuukpWdjuLC9i1KxivIA4jlGQHUqw7cg9KKWxu0v9PtryIER3ESyqD1AYAj+dFedUVptWtrsWjP8AFOit4i8NXulpKsTzKpR2GQGVgwyPTKjNcfHpeqoBBL8M/D8so4NyksCxk+u0qWxXpFFQB5n4WGu2E+q3+maNp00Ul0beaztnEARowBmMkY25Zu1dEmnazd3E+t6hBEl9DayR2FlFIG8tmHJLnALHgdhitvSNJt9Fsja27yOpkaRmlILFmOTnAFX69TFY9TlJUopacvNrflStbe22m17aXIjDuYng/SpdE8I6Zp86BJ4oR5qAg7XJLMMjg8k1w1h4U8TaNdR+JLKxim1SeW4F7YSzKpdHk3LhwdueAevp9K9UorzE2ndBOnCpFwmrp9GcZPb+JvE2m3lhf6Tb6TbSwkDfdidy4IK/dGAMjnvS3A8W65YvpV3pltp8Uq+XcXa3Afen8WxB0JHr612VFd1HMJ04pOKlZ3V1s9NdGuy3vsc6wdOEXGk3H0f6O6/CxXt1htLaK2iUxxxIERSOigYFFWKK5nOm3dp39f8AgEeyxq0VSPzg/wBJr8j/2Q==" >
+								</div>
+								<a class="fl_pop_btn_normal" href="javascript:;">免费获取</a>
+							</div>
+						</div>
+					</div>
+					<div class="fl_pop_qrcode">
+						<div class="fl_pop_hint">扫描二维码</div>
+						<div style="position:relative;background-color:white;width:115px;height:115px;margin-top: 7px;">
+							<div id="popfloating_float_img">
+								<img alt="Scan me!" src="http://139.199.115.57/newImages/ewm.png" >
+							</div>
+						</div>
+					</div>
+				</div>
+				<a href="javascript:;" class="fl_wrap_close" title="关闭">×</a>
+			</div>
+		</div>
+	</div>
+	
+	<script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.js"></script>
+	<script>
+	$(function(){
+
+		var openWrap = $('.fl_open_wrap');
+		var openWrapCont = $('.fl_open_wrap_cntr');
+		var popWrap = $('.fl_pop_wrap');
+		var popWrapCont = $('.fl_pop_wrap_cntr');
+		var closeWrap = $('.fl_wrap_close');
+
+		openWrap.click(function(){
+
+			openWrapCont.animate({
+				left : '-100%'
+			});
+
+			$(this).fadeOut();
+
+			popWrap.css('display','block');
+
+			popWrapCont.delay(400).animate({
+				left : '0'
+			});
+
+		});
+
+		closeWrap.click(function(){
+
+			popWrapCont.animate({
+				left : '-100%'
+			});
+			popWrap.fadeOut('slow');
+
+			openWrapCont.animate({
+				left : '0'
+			});
+			openWrap.fadeIn();
+		});
+	});
+
+	</script>
+</body>
+</html>

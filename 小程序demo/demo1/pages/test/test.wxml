@@ -1,99 +1,17 @@
-<!-- test 响应式数据绑定 -->
-<button bindtap="changeName">点我试试</button>
-<view class="changeName">Hello {{name}}</view>
-<view>{{message}}</view>
-
-<!--列表渲染-->
-<!--<view wx:for="{{array}}">{{item}}</view>-->
-
-<!--条件渲染-->
-<view wx:if="{{view == 'WEBVIEW'}}">WEBVIEW</view>
-<view wx:elif="{{view == 'APP'}}">APP</view>
-<view wx:else="{{view == 'MINA'}}">MINA</view>
-
-<!--模板-->
-<template name="staffName">
-    <view>
-        FirstName: {{firstName}},
-        LastName: {{lastName}}
-    </view>
-</template>
-<template is="staffName" data="{{...staffA}}"></template>
-<template is="staffName" data="{{...staffB}}"></template>
-<template is="staffName" data="{{...staffC}}"></template>
-
-<!--事件-->
-<view bindtap="add">{{count}}</view>
-
-<!--数据绑定子类-->
-<checkbox checked="{{false}}"></checkbox>
-<checkbox checked="{{true}}"></checkbox>
-
-<!--三元运算-->
-<view hidden="{{flag ? true : false}}">hidden</view>
-
-<!--算数运算--><!--iew中的内容为 3 + 3 + d-->
-<view>{{a + b}} + {{c}} + d</view>  
-
-<!--逻辑判断-->
-<view wx:if="{{length > 5}}">逻辑判断为真显示</view>
-
-<!--字符串运算-->
-<view>{{"hello:" + name}}</view>
-
-<!--数据路径运算-->
-<view>{{object.key}} {{arr[0]}}</view>
-
-<!--组合-->
-<!--<view wx:for="{{[zero,1,2,3,4]}}">{{item}}</view> -->        <!-- [0,1,2,3,4] --> 
-
-<!--对象-->
-<template is="objectCombine" data="{{obj1: a, obj2: b}}"></template>    <!-- {for: 1, bar: 2} -->
-
-<template is="objectCombine" data="{{...obj1, ...obj2, e: 5}}"></template>  <!-- {a: 1, b: 2, c: 3, d: 4, e: 5} -->
-
-<!--列表渲染-->
-<!--<view wx:for="{{array1}}">
-    {{index}} : {{item.message}}
-</view>-->
-
-<!--使用 wx:for-item 可以指定数组当前元素的变量名， 使用 wx:for-index 可以指定数组当前下标的变量名：-->
-<view wx:for="{{array2}}" wx:for-index="sIndex" wx:for-item="sItem">
-{{sIndex}} : {{sItem.message}}
+<view class="swiper-container">
+  <swiper autoplay="auto" circular="true" interval="5000" duration="500" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper">
+    <block wx:for="{{slider}}" wx:key="unique">
+      <swiper-item>
+        <image src="{{item.picUrl}}" class="img"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+ 
+  <view class="dots">
+    <block wx:for="{{slider}}" wx:key="unique">
+      <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+    </block>
+  </view>
 </view>
-
-<!--<view wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:for-item="i">
-    <view wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:for-item="j">
-        <view wx:if="{{i <= j}}">
-        {{i}} * {{j}} = {{i * j}}
-        </view>
-    </view>
-</view>-->
-
-<!--<block wx:for="{{[11,12,13]}}">
-    <view>{{index}}:{{item}}</view>
-</block>-->
-
-<template name="odd">
-    <view>odd</view>
-</template>
-<template name="even">
-    <view>even</view>
-</template>
-
-<block wx:for="{{[1,2,3,4]}}">
-    <template is="{{item % 2 == 0 ? 'even' : 'odd'}}"></template>
-</block>
-
-<!--事件使用方式-->
-<view id="tapTest" data-hi="WeChat" bindtap="tapName"> 点击试试 </view>
-
-
-
-<!-- https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/data.html -->
-
-
-
-
-
+<view class="swiper_sm">仿QQ音乐轮播图</view>
 
