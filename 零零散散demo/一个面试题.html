@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	/*方法一：*/
+	/*body{ margin:0; padding:0}
+	div{ background: #ccc;}
+	#first{ float: left; width: 100px; height: 150px; }
+	#second{ clear: left; margin-top: 10px; float: left; width: 100px; height: 150px;}
+	#third{ width: 200px; height: 310px; margin-left: 110px; _margin-left: 107px;}*/
+	
+	/*方法二*/
+	body{ margin:0; padding:0}
+	div{background:#CCCCCC; position:absolute}
+	#first{width:100px; height:150px}
+	#second{top:160px;width:100px;height:150px}
+	#third{ width:200px; height:310px; left:110px}
+	</style>
+</head>
+<body>
+<!-- 
+	设计这个布局，主要考虑几个问题：
+	1. IE6 的 3 像素 BUG；
+	2. 清楚浮动；
+ -->
+	<div id="first"></div>   
+	<div id="second"></div>   
+	<div id="third"></div>
+	
+	<script>
+		// 设置缩放函数参数：容器id、横向缩放倍数、纵向缩放倍数（等比例缩放时也可以设定一个参数）
+		function zoom(id,x,y){ 
+			var obj=document.getElementById(id); // 获取元素对象值
+			var dW=obj.clientWidth; // 获取元素宽度
+			var dH=obj.clientHeight; // 获取元素高度
+			
+			obj.onmouseover=function(){ // 鼠标移入
+				this.style.width=dW*x+"px"; // 横向缩放
+				this.style.height=dH*y+"px"; // 纵向缩放
+				this.style.backgroundColor="#DDF8C0"; // 设置调试背景
+				this.style.zIndex=1; // 设置z轴优先
+			}
+			obj.onmouseout=function(){ // 鼠标移出，设回默认值
+				this.style.width="";
+				this.style.height="";
+				this.style.backgroundColor="";
+				this.style.zIndex="";
+			}
+		}
+		zoom("first",1.25,1.25);
+		zoom("second",1.25,1.25);
+		zoom("third",1.25,1.25);
+	</script>
+
+</body>
+</html>
