@@ -20,11 +20,11 @@
 			<div class="task_show">
 				<div class="task_item" style="display:block;">
 					<div class="accordion">
-						<h4 class="acc_tt">简易注册</h4>
+						<h4 class="acc_tt"><span class="fr">▼</span>简易注册</h4>
 						<dl>
 							<dd><span class="jb_icon jb_state1">2</span>1.跟客户确认注册信息</dd>
 						</dl>
-						<h4 class="acc_tt">记账报税</h4>
+						<h4 class="acc_tt"><span class="fr">▼</span>记账报税</h4>
 						<dl>
 							<dd><span class="jb_icon jb_state1">1</span>1.月初沟通</dd>
 							<dd><span class="jb_icon jb_state1">3</span>2.申报国税地税</dd>
@@ -160,8 +160,16 @@
 			$('.task_item').eq($(this).index()).show().siblings('.task_item').hide();
 		});
 
+		var onOff = true;
 		$('.accordion').find('h4').click(function(){
-			$(this).next('dl').slideToggle('fast');
+			if(onOff){
+				$(this).next('dl').slideDown('fast');
+				$(this).find('span').html('▲')
+			}else{
+				$(this).next('dl').slideUp('fast');
+				$(this).find('span').html('▼')
+			}
+			onOff = !onOff;
 		});
 
 	});

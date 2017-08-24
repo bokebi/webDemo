@@ -110,7 +110,8 @@ input[type="checkbox"] ,select{ outline: none;}
 .task_tab{ background: #fff;}
 .task_item{ display: none;}
 .acc_tt{ font-size: 14px; font-weight: bold; color: #666; border-bottom: 1px solid #ddd; padding: 10px;}
-.accordion dl{ padding: 5px 10px 0;}
+.acc_tt span{ font-size: 14px; color: #999;}
+.accordion dl{ display: none; padding: 5px 10px 0;}
 .accordion dd{ padding: 10px 5px; color: #666; border-bottom: 1px solid #ddd;}
 .jb_icon{ float: right; display: inline-block; background: #d1dade; color: #5e5e5e; padding: 2px 8px; border-radius: 2px; font-size: 10px; font-weight: 600;}
 .jb_state1{ background: #ed5565; color: #fff;}
