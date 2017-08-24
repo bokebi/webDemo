@@ -7,6 +7,8 @@ body{ background: #f7f7f7;}
 .grey{ color: #909090!important;}
 .orange{ color: #f67231!important;}
 .blue{ color: #2595eb!important;}
+.green{ color: #008000!important;}
+.red{ color: #f00!important;}
 .bdn{ border: none!important;}
 input[type="checkbox"] ,select{ outline: none;}
 
@@ -81,7 +83,7 @@ input[type="checkbox"] ,select{ outline: none;}
 .other_list li{ padding: 2px 0; color: #909090;}
 .other_list li time{ float: right;}
 
-.seperate{ height: 50px;}
+.seperate{ height: 60px;}
 
 /*底部导航*/
 .foot_nav{ position: fixed; left: 0; right: 0; bottom: 0; width: 100%; height: 50px; background: #fff; border-top: 1px solid #dedede;}
@@ -91,6 +93,42 @@ input[type="checkbox"] ,select{ outline: none;}
 .foot_nav nav li a.active ,.foot_nav nav li a:hover{ color: #1ab394;}
 .foot_nav nav li a i{ font-size: 22px; display: inline-block; height: 22px;}
 .foot_nav nav li a p{ margin-top: -2px;}
+
+/*我的余额*/
+.person_info{ background: #fff; padding: 10px 10px 0; border-bottom: 1px solid #ddd;}
+.person_info li{ float: left; width: 50%; padding-bottom: 10px;}
+.sr_btns{ padding-bottom: 10px;}
+.btn-primary {background-color: #1ab394; border-color: #1ab394; color: #FFFFFF; margin: 2px 0; }
+.sel_cost{ background: #fff; border: 1px solid #aaa; height: 30px; width: 45%;}
+.input_date{ background: #fff; border: 1px solid #aaa; height: 30px;}
+
+.deal_list{ margin-top: 10px; background: #fff; border-top: 1px solid #ddd; }
+.deal_list h4{ padding: 10px; font-size: 14px;}
+.deal_table{ margin: 0;}
+
+/*我的任务*/
+.task_tab{ background: #fff;}
+.task_item{ display: none;}
+.acc_tt{ font-size: 14px; font-weight: bold; color: #666; border-bottom: 1px solid #ddd; padding: 10px;}
+.accordion dl{ padding: 5px 10px 0;}
+.accordion dd{ padding: 10px 5px; color: #666; border-bottom: 1px solid #ddd;}
+.jb_icon{ float: right; display: inline-block; background: #d1dade; color: #5e5e5e; padding: 2px 8px; border-radius: 2px; font-size: 10px; font-weight: 600;}
+.jb_state1{ background: #ed5565; color: #fff;}
+.control_group{ padding: 10px 0 0;}
+.control_btns{ padding: 0 10px;}
+.form_group{ padding: 0 10px;}
+.flex_inline{ display: flex; padding-top: 10px;}
+.flex_inline label{ width: 80px; height: 30px; line-height: 30px; color: #676a6c;}
+.flex_inline input{ width: 76%; padding: 0 2%; border: 1px solid #ccc; border-radius: 4px;}
+.fp_select{ width: 80%; border: 1px solid #ccc; border-radius: 4px;}
+.label_btns{ padding-top: 10px;}
+.show_item{ padding: 5px 10px; border-bottom: 10px solid #f7f7f7;}
+.show_item p{ font-size: 15px; padding: 5px 0; border-bottom: 1px solid #ddd;}
+.show_item ul{ padding-top: 5px;}
+.show_item li{ clear: both; padding: 5px 0; font-size: 13px; }
+.show_item li button{ margin-right: 2px;}
+
+
 
 
 @media screen and (max-width:320px){

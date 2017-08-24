@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
+	<meta name="format-detection" content="telephone=no">
+	<title>我的任务</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="task_box">
+		<div class="task_tab">
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="javascript:;">未完成任务</a></li>
+				<li><a href="javascript:;">已完成任务</a></li>
+				<li><a href="javascript:;">任务一览</a></li>
+			</ul>
+			<div class="task_show">
+				<div class="task_item" style="display:block;">
+					<div class="accordion">
+						<h4 class="acc_tt">简易注册</h4>
+						<dl>
+							<dd><span class="jb_icon jb_state1">2</span>1.跟客户确认注册信息</dd>
+						</dl>
+						<h4 class="acc_tt">记账报税</h4>
+						<dl>
+							<dd><span class="jb_icon jb_state1">1</span>1.月初沟通</dd>
+							<dd><span class="jb_icon jb_state1">3</span>2.申报国税地税</dd>
+							<dd><span class="jb_icon jb_state1">2</span>3.做账</dd>
+							<dd><span class="jb_icon jb_state1">3</span>4.送账本</dd>
+							<dd><span class="jb_icon jb_state1">2</span>5.客户评价</dd>
+						</dl>
+					</div>
+					<div class="control_group">
+						<div class="control_btns">
+							<button type="button" class="btn btn-primary">新增任务</button>
+	                   		<button type="button" class="btn btn-primary">开启</button>
+	                   		<button type="button" class="btn btn-primary">暂停</button>
+	                   		<button type="button" class="btn btn-primary">结束</button>
+	                   		<button type="button" class="btn btn-primary">批量分配</button>
+						</div>
+						<form class="form_group">
+							<div class="flex_inline">
+								<label>企业名称</label>
+								<input type="text">
+							</div>
+							<div class="flex_inline">
+								<label>客户名称</label>
+								<input type="text">
+							</div>
+							<div class="flex_inline">
+								<label>手机号码</label>
+								<input type="tel">
+							</div>
+							<div class="flex_inline">
+								<label>处理人</label>
+								<input type="text">
+							</div>
+							<div class="flex_inline">
+								<label>是否分配</label>
+								<select class="fp_select" name="">
+									<option value="请选择">请选择</option>
+									<option value="已分配">已分配</option>
+									<option value="未分配">未分配</option>
+								</select>
+							</div>
+							<div class="label_btns">
+								<a class="btn btn-primary">不限</a>
+                                <a class="btn btn-primary"><i class="fa fa-plus"></i>筛选</a>
+                                <button type="button" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i>搜索</button>
+								<button type="reset" class="btn btn-default"><i class="glyphicon glyphicon-remove"></i>清空</button>
+							</div>
+						</form>
+						<div class="task_info">
+							<div class="show_item">
+								<p><span><input name="checkbox" type="checkbox"></span> 深圳XXX科技有限公司</p>
+								<ul class="clearfix">
+									<li><span class="green fr">服务中</span>任务名称：申报国税地税</li>
+									<li><span class="fr">手机号码：13812345678</span>客户名称：黄先生</li>
+									<li><span class="fr">处理人：黄大大</span>创建时间：2017/08/21</li>
+									<li>
+										<button class="btn btn-primary btn-xs">分配</button>
+										<button class="btn btn-primary btn-xs">删除</button>
+										<button class="btn btn-primary btn-xs">跟进</button>
+									</li>
+								</ul>
+							</div>
+							<div class="show_item">
+								<p><span><input name="checkbox" type="checkbox"></span> 深圳XXX科技有限公司</p>
+								<ul class="clearfix">
+									<li><span class="green fr">服务中</span>任务名称：申报国税地税</li>
+									<li><span class="fr">手机号码：13812345678</span>客户名称：黄先生</li>
+									<li><span class="fr">处理人：黄大大</span>创建时间：2017/08/21</li>
+									<li>
+										<button class="btn btn-primary btn-xs">分配</button>
+										<button class="btn btn-primary btn-xs">删除</button>
+										<button class="btn btn-primary btn-xs">跟进</button>
+									</li>
+								</ul>
+							</div>
+							<div class="show_item">
+								<p><span><input name="checkbox" type="checkbox"></span> 深圳XXX科技有限公司</p>
+								<ul class="clearfix">
+									<li><span class="green fr">服务中</span>任务名称：申报国税地税</li>
+									<li><span class="fr">手机号码：13812345678</span>客户名称：黄先生</li>
+									<li><span class="fr">处理人：黄大大</span>创建时间：2017/08/21</li>
+									<li>
+										<button class="btn btn-primary btn-xs">分配</button>
+										<button class="btn btn-primary btn-xs">删除</button>
+										<button class="btn btn-primary btn-xs">跟进</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="task_item">2</div>
+				<div class="task_item">3</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 底部导航 -->
+	<div class="clearfix seperate"></div>
+	<footer class="foot_nav clearfix">
+		<nav>
+			<ul>
+				<li>
+					<a href="client.html">
+						<i class="iconfont">&#xe632;</i>
+						<p>我的客户</p>
+					</a>
+				</li>
+				<li>
+					<a class="active" href="task.html">
+						<i class="iconfont">&#xe700;</i>
+						<p>我的任务</p>
+					</a>
+				</li>
+				<li>
+					<a href="balance.html">
+						<i class="iconfont">&#xe637;</i>
+						<p>我的余额</p>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</footer>
+	
+	<script src="js/jquery-1.10.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script>
+	$(function(){
+
+		// Tab选项卡切换
+		$('.nav-tabs').find('li').click(function(){
+			$(this).addClass('active').siblings().removeClass('active');
+			$('.task_item').eq($(this).index()).show().siblings('.task_item').hide();
+		});
+
+		$('.accordion').find('h4').click(function(){
+			$(this).next('dl').slideToggle('fast');
+		});
+
+	});
+	</script>
+</body>
+</html>
