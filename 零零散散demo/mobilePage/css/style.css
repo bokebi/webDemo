@@ -129,14 +129,29 @@ input[type="checkbox"] ,select{ outline: none;}
 .show_item li{ clear: both; padding: 5px 0; font-size: 13px; }
 .show_item li button{ margin-right: 2px;}
 
-
-
+/*登录页*/
+.login_bg{ background: url(../images/login_bg.jpg) repeat; background-size: 100%; }
+.hot_line{ color: #fff; text-align: right; padding: 15px 15px 0 0; }
+.hot_logo{ padding: 35px 20%;}
+.login_form{ padding: 0 4.6%;}
+.form_bg{ padding: 0 2%; background: rgba(0,0,0,.5);}
+.form_bg li{ padding: 10px 0;}
+.form_bg li:nth-of-type(1){ border-bottom: 1px solid #878888;}
+.form_bg li input{ width: 100%; background: transparent; color: #888; border: none;}
+.login_btn{ margin-top: 12px; width: 100%; background: #f4a100; border: none; color: #fff; border-radius: 4px; padding: 12px 0; font-size: 16px;}
+.join_box{ padding: 50px 8% 0; color: #fefefe;}
+.join_box h4{ font-size: 16px; line-height: 24px;}
+.join_box .lightOrange{ color: #f3c264;}
+.join_box p{ line-height: 30px;}
+.jm_btn{ text-align: center; margin-top: 20px;}
+.jm_btn a{ display: inline-block; color: #fff; padding: 6px 36px; border: 2px solid #fff; font-size: 16px;}
 
 @media screen and (max-width:320px){
 	.table-bordered>tbody>tr>th ,.table-bordered>tbody>tr>td{ font-size: 12px; padding: 8px 4px;}
   .form_wbk{ width: 58%;}
   .formItem select{ width: 58%;}
   .remarks_wby{ min-height: 60px;}
+  .join_box p{ line-height: 22px;}
 }
 @media screen and (min-width:321px) and (max-width: 375px){
 	.table-bordered>tbody>tr>th ,.table-bordered>tbody>tr>td{ font-size: 13px;}
