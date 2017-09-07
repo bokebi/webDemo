@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
+	<meta name="format-detection" content="telephone=no">
+	<title>登录页</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background:#fff;">
+	<div class="wrapper wrapper-content fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+			 	<div class="ibox">
+			 	 <!-- 客户基本信息开始-->
+		             <form method="post" id="customerForm"   class="form-horizontal">
+		             	<input type="hidden" id="myCus" value="Y">
+		             	<input type="hidden" name="id" id="customerId" value="156">
+		             	<input type="hidden" name="type" id="type" value="undefined">
+						<table  width="80%"  class="table table-bordered definewidth m10">
+						    <tr>
+						        <td width="10%" class="tableleft">客户姓名</td>
+						        <td>
+						        		<input type="text" name="customerName" value="轻轻巧巧2" class="form-control">
+						        </td>
+						        <td width="10%" class="tableleft">客户号码</td>
+						        <td>
+						        	<input type="text" id="customerMobile" name="customerMobile" value="" class="form-control">
+						        </td>
+						    </tr>
+			
+						    <tr>
+						        <td width="10%" class="tableleft">客户QQ</td>
+						        <td>
+						        	<input type="text" id="customerQq" name="customerQq" value="3213" class="form-control">
+						        </td>
+						        <td width="10%"  class="tableleft">客户微信号</td>
+						        <td>
+						        	<input type="text" id="customerWechat" name='customerWechat' value="3213" class="form-control">
+						        </td>
+						    </tr>
+						    <tr>
+						        <td width="10%" class="tableleft">推荐人</td>
+						        <td>
+						        	
+						        </td>
+						        <td width="10%" class="tableleft">地区</td>
+						        <td>
+						        	<select class="form-control" name="areaId">
+						        	   <option value="">请选择</option>
+			                               
+			                               		<option  value="1537">深圳市</option>
+			                               
+			                               		<option selected value="1549">广州市</option>
+			                               
+			                               		<option  value="1561">佛山市</option>
+			                               
+			                               		<option  value="1567">东莞市</option>
+			                               
+			                               		<option  value="1601">重庆市</option>
+			                               
+			                               		<option  value="1612">成都市</option>
+			                               
+			                               		<option  value="1626">杭州市</option>
+			                               
+			                               		<option  value="1636">惠州市</option>
+			                               
+			                               		<option  value="1638">郑州市</option>
+			                               
+			                               		<option  value="1652">天津市</option>
+			                               
+			                               		<option  value="1670">青岛市</option>
+			                               
+			                               		<option  value="1683">银川市</option>
+			                               
+			                               		<option  value="1691">上海市</option>
+			                               
+			                               		<option  value="1710">北京市</option>
+			                               
+			                               		<option  value="1711">紫禁城分公司</option>
+			                               
+			                               		<option  value="1713">无地区</option>
+			                               
+		                            </select>
+						        </td>
+					
+						    </tr>
+						
+						    <tr>
+						    	<td width="10%" class="tableleft">备注</td>
+						        <td colspan="5">
+						        	<textarea style="resize: none;" rows="2"  name="remark" class="form-control" aria-required="true"></textarea>
+						        </td>
+						    </tr>
+						 
+						</table>
+						   
+					</form>
+							
+					<!-- 客户基本信息结束 -->
+					<form action="" class="form-horizontal" id="saveTraceLogForm">
+						<input type="hidden" name="id" id="traceLogId" value="" />
+						<fieldset class="layui-elem-field"
+							style="width: 100%; border: 1px solid #f5f5f5; padding: 8px 10px;">
+							<h5 style="padding-bottom: 10px; font-weight: bold;">添加跟进记录</h5>
+							<div class="layui-field-box">
+								<textarea style="resize: none;" rows="2" id="messageText"
+									name="messageText" class="form-control" aria-required="true"></textarea>
+							</div>
+							<div class="layui-field-box" id="uploadTraceFileId"></div>
+							<div style="padding-top: 15px;">
+								<div class="layui-field-box" style="float: left;">
+									<span id="btn_upload"></span>
+								</div>
+								<div style="float: right;">
+									<button type="button" class="btn btn-primary btn-sm" onclick="bcCustomer();" style="background: #009f95;">
+										<i class="glyphicon glyphicon-plus"></i>保存
+									</button>
+									<button type="button" class="btn btn-default btn-sm"onclick="parent.layer.closeAll();">
+										<i class="glyphicon glyphicon-remove"></i>取消
+									</button>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+					<div class="">
+						<table id="trace_table" style="background-color: #FFFFFF; width: 100%;">
+						</table>
+					</div>
+						
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery-1.10.1.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+.page-header-text{
+    text-align:center;
+    color:#999;
+}
+
+.search-area {
+  box-sizing: border-box;
+  position: relative;
+  margin: 30rpx 30rpx 10rpx 30rpx;
+  font-size:30rpx;
+}
+.search-txt {
+  box-sizing: border-box;
+  width: 85%;
+  height: 80rpx;
+  padding-right: 20rpx;
+  border-radius: 10rpx;
+  border: 1px solid #eee;
+  font-family: "微软雅黑";
+  text-align: center;
+ 
+}
+.search-btn {
+  position: absolute;
+  z-index: 11;
+  top: 0;
+  right: 0;
+  height: 80rpx;
+  width: 120rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.search-btn::after{
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+/*标签筛选*/
+.search-keyword {
+  padding: 1rpx 30rpx 30rpx 30rpx;
+}
+.search-keyword-title {
+  padding-left: 20rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  font-size: 30rpx;
+  border-left: 10rpx solid #222;
+}
+.search-keyword-item {
+  display: inline-block;
+  padding: 10rpx;
+  border: 1px solid #ccc;
+  border-radius: 15rpx;
+  background-color: #fdfdfe;
+  margin: 0 10rpx 15rpx 0;
+  color: #666;
+  font-size: 26rpx;
+}
+
+
+
+
+
+
+.page-body{
+    display:flex;
+    flex:1;
+    flex-direction:column;
+}
+.item{
+    display:flex;
+    padding:20rpx 40rpx;
+    border-bottom:2rpx solid #eee;
+}
+.item .poster{
+    width:128rpx;
+    height:128rpx;
+    margin-right:30rpx;
+    justify-content:flex-start;
+}
+.item .meta{
+    flex:1;
+    justify-content:center;
+}
+.item .title{
+    display:block;
+    font-size:32rpx;
+    margin-top:6rpx;
+}
+.item .sub-title{
+    display:block;
+    font-size:28rpx;
+    color:#c0c0c0;
+    margin-top:12rpx;
+}
+.item .artists{
+    font-size:26rpx;
+    color:#999;
+    margin-top:15rpx;
+}
+.item .rating{
+    justify-content:flex-end;
+    align-self:center;
+    font-size:28rpx;
+    font-weight:bold;
+    color:#ec3030;
+}

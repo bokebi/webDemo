@@ -1,0 +1,35 @@
+<!--<view class="page-header">
+    <input class="page-header-text" placeholder="请输入搜索关键词" auto-focus bindchange="search"/>
+</view>-->
+<view class="search-area">
+    <form bindsubmit="search">
+        <input class="search-txt" name="keyword" placeholder="请输入您的搜索关键字"/>
+        <button class="search-btn" formType="submit">搜索</button>
+    </form>
+</view>
+<view class="search-keyword">
+    <!--标签搜索区： 巩固遍历数组取值的方法-->
+    <view class="search-keyword-title">热门搜索</view>
+    <view wx:for="{{hotKeyword}}" wx:for-item="hotKeywordItem"  class="search-keyword-item" data-keyword="{{hotKeywordItem}}" bindtap="searchByKeyword">{{hotKeywordItem}}</view>
+    <view class="search-keyword-title">热门标签</view>
+    <view wx:for="{{hotTag}}" wx:for-item="hotTagItem" class="search-keyword-item" data-keyword="{{hotTagItem}}" bindtap="searchByTag">{{hotTagItem}}</view>
+</view>
+<!--搜索结果区-->
+<scroll-view class="page-body" scroll-y="true">
+    <navigator url="../movie/movie?id={{item.id}}" wx:for="{{movies}}">
+        <view class="item">
+            <image class="poster" src="{{item.images.small}}"></image>
+            <view class="meta">
+                <!--影片名称-->
+                <text class="title">{{item.title}}</text>
+                <!--小标题+时间-->
+                <text class="sub-title">{{item.original_title}}({{item.year}})</text>
+                <!--导演名称-->
+                <text class="artists"><text wx:for="{{item.directors}}">{{item.name}}</text></text>
+            </view>
+            <view class="rating">
+                <text>{{item.rating.average}}</text>
+            </view>
+        </view>
+    </navigator>
+</scroll-view>

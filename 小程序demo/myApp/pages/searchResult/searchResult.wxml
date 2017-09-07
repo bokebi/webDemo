@@ -1,0 +1,22 @@
+<scroll-view class="page-body" scroll-y="true">
+    <view class="film-scroll-view">
+        <view class="filmItem" wx:for="{{movies}}" wx:for-index="filmIndex" wx:for-item="filmItem" wx:key="{{filmItem.id}}" data-id="{{filmItem.id}}" catchtap="detailTap">
+            <image class="file-cover-image" src="{{filmItem.images.large}}"></image>
+            <view class="film-rating">
+                <block wx:if="{{filmItem.rating.average == 0}}">
+                    暂无评分
+                </block>
+                <block wx:else>
+                    {{filmItem.rating.average}}分
+                </block>
+            </view>
+            <view class="film-title">{{filmItem.title}}</view>
+            <view class="film-tag">
+                <!--为每个电影类型小按钮绑定点击事件 => 点击进入搜索结果筛选页-->
+                <view class="film-tag-item" wx:for="{{filmItem.genres}}" wx:for-item="filmTagItem" wx:key="genres" data-tag="{{filmTagItem}}" catchtap="tagTap">
+                    {{filmTagItem}}
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>                

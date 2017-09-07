@@ -1,0 +1,129 @@
+.top-banner{
+    position:relative;
+    width:100%;
+    height:600rpx;
+}
+.top-banner:before{
+    content:'';
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+    width:100%;
+    height:600rpx;
+    background-color:rgba(0 ,0 ,0 ,.6);
+}
+.top-background{
+    position:absolute;
+    z-index:-2;
+    width:100%;
+    height:600rpx;
+    justify-content:center;
+    filter:blur(20rpx);
+}
+/*电影海报*/
+.movie-pic{
+    position:absolute;
+    width:300rpx;
+    height:420rpx;
+    top:80rpx;
+    left:30rpx;
+    box-shadow: 0 30rpx 150rpx rgba(255, 255, 255, .3);
+}
+/*电影介绍*/
+.movie-intro{
+    position:absolute;
+    width:350rpx;
+    color:#fff;
+    top:80rpx;
+    right:30rpx;
+}
+.movie-title{
+    font-size:50rpx;
+    margin-bottom:35rpx;
+}
+.movie-intro-txt{
+    font-size:30rpx;
+    line-height:50rpx;
+    margin-bottom:16rpx;
+}
+/*电影用户数据统计*/
+.movie-data{
+    display:flex;
+    width:100%;
+    height:150rpx;
+    justify-content:space-around;
+    align-items:center;
+    border-bottom:1px solid #eee;
+    margin-top:10rpx;
+}
+.movie-data-item{
+    width:33.3%;
+    text-align:center;
+    border-left:1px solid #eee;
+}
+.movie-data-num{
+    color:#555;
+    margin-bottom:16rpx;
+}
+.movie-data-title{
+    color:#999;
+}
+/*剧情介绍区域*/
+.movie-bd{
+    padding:0 40rpx 40rpx;
+}
+.movie-bd-title{
+    padding-left: 20rpx;
+    margin: 40rpx 0 20rpx 0;
+    font-size: 36rpx;
+    font-weight: bold;
+    color: #444;
+    border-left: 10rpx solid #222;
+}
+.movie-bd-intro{
+    text-align: justify;
+    line-height: 1.7;
+    color: #666;
+    font-size:33rpx;
+}
+/*导演、演员照片区*/
+.movie-bd-person{
+    display: flex;
+    width: 100%;
+    height: 500rpx;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin-top:20rpx;
+}
+.movie-bd-person-item{
+    margin-left:20rpx;
+    text-align:center;
+}
+.movie-bd-person-avatar{
+    width: 280rpx;
+    height: 400rpx;
+}
+.movie-bd-person-name{
+    color:#666;
+    font-size:32rpx;
+    margin-top:10rpx;
+}
+.movie-bd-person-role{
+    color:#999;
+    font-size:30rpx;
+    margin-top:10rpx;
+}
+.movie-bd-tag{
+    display:flex;
+    color:#666;
+}
+.movie-bd-tag-item{
+    padding: 5rpx 10rpx;
+    margin-right: 15rpx;
+    border: 1px solid #ccc;
+    border-radius: 10rpx;
+    color: #666;
+    font-size:32rpx;
+}

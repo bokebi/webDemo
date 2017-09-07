@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
+	<meta name="format-detection" content="telephone=no">
+	<title>我的余额</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="person_info clearfix">
+		<ul>
+			<li>当前用户：黄大大</li>
+			<li>累计充值：6000.00</li>
+			<li>余额：<span class="green">420.00</span></li>
+			<li>已消费：<span class="red">5580.00</span></li>
+			<li>消费类型：
+				<select class="sel_cost" name="">
+					<option value="请选择">请选择</option>
+					<option value="充值">充值</option>
+					<option value="消费">消费</option>
+				</select>
+			</li>
+			<li><input class="input_date" type="date"></li>
+			<p class="sr_btns">
+				<button class="btn btn-primary"><i class="glyphicon glyphicon-search"></i> 搜索</button>
+				<button class="btn btn-primary"><i class="glyphicon glyphicon-search"></i> 搜索所有</button>
+			</p>
+		</ul>
+	</div>	
+
+	<div class="deal_list">
+		<h4>账户交易列表</h4>
+		<table class="deal_table table table-bordered">
+			<tr>
+				<th>&nbsp;</th>
+				<th>交易账号</th>
+				<th>姓名</th>
+				<th>交易金额</th>
+				<th>交易类型</th>
+				<th>创建时间</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>dym@admin</td>
+				<td>黄大大</td>
+				<td>180</td>
+				<td>消费</td>
+				<td>2017/08/04</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>dym@admin</td>
+				<td>黄大大</td>
+				<td>180</td>
+				<td>消费</td>
+				<td>2017/08/04</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>dym@admin</td>
+				<td>黄大大</td>
+				<td>180</td>
+				<td>消费</td>
+				<td>2017/08/04</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>dym@admin</td>
+				<td>黄大大</td>
+				<td>180</td>
+				<td>消费</td>
+				<td>2017/08/04</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>dym@admin</td>
+				<td>黄大大</td>
+				<td>180</td>
+				<td>消费</td>
+				<td>2017/08/04</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>dym@admin</td>
+				<td>黄大大</td>
+				<td>180</td>
+				<td>消费</td>
+				<td>2017/08/04</td>
+			</tr>
+		</table>
+	</div>
+
+	<!-- 底部导航 -->
+	<div class="clearfix seperate"></div>
+	<footer class="foot_nav clearfix">
+		<nav>
+			<ul>
+				<li>
+					<a href="client.html">
+						<i class="iconfont">&#xe632;</i>
+						<p>我的客户</p>
+					</a>
+				</li>
+				<li>
+					<a href="task.html">
+						<i class="iconfont">&#xe700;</i>
+						<p>我的任务</p>
+					</a>
+				</li>
+				<li>
+					<a class="active" href="balance.html">
+						<i class="iconfont">&#xe637;</i>
+						<p>我的余额</p>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</footer>
+	
+	<script src="js/jquery-1.10.1.min.js"></script>
+	
+</body>
+</html>

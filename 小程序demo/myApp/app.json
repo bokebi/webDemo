@@ -1,0 +1,53 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/movie/movie",
+    "pages/hot/hot",
+    "pages/coming/coming",
+    "pages/search/search",
+    "pages/searchResult/searchResult",
+    "pages/tagSearchResult/tagSearchResult",
+    "pages/person/person",
+    "pages/profile/profile"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "豆瓣电影",
+    "navigationBarTextStyle":"#fff"
+  },
+  "tabBar":{
+    "color":"#ccc",
+    "list":[
+       {
+        "text":"推荐",
+        "iconPath":"images/star.png",
+        "selectedIconPath":"images/star-actived.png",
+        "pagePath":"pages/index/index"
+      },
+      {
+        "text":"热映",
+        "iconPath":"images/popular_icon.png",
+        "selectedIconPath":"images/popular_active_icon.png",
+        "pagePath":"pages/hot/hot"
+      },
+      {
+        "text":"待映",
+        "iconPath":"images/coming_icon.png",
+        "selectedIconPath":"images/coming_active_icon.png",
+        "pagePath":"pages/coming/coming"
+      },
+      {
+        "text":"搜索",
+        "iconPath":"images/search.png",
+        "selectedIconPath":"images/search-actived.png",
+        "pagePath":"pages/search/search"
+      },{
+        "text":"我的",
+        "iconPath":"images/profile.png",
+        "selectedIconPath":"images/profile-actived.png",
+        "pagePath":"pages/profile/profile"
+      }
+    ]
+  }
+}

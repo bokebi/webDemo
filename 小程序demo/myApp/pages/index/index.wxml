@@ -1,0 +1,23 @@
+
+<scroll-view class="page-body" scroll-y="true">
+    <view class="item" data-id="{{item.id}}" wx:for="{{movies}}" catchtap="movieDetail">
+        <image class="poster" src="{{item.images.small}}"></image>
+        <view class="meta">
+            <!--影片名称-->
+            <text class="title">{{item.title}}</text>
+            <!--小标题+时间-->
+            <text class="sub-title">{{item.original_title}}({{item.year}})</text>
+            <!--导演名称-->
+            <text class="artists"><text wx:for="{{item.directors}}">{{item.name}}</text></text>
+        </view>
+        <view class="rating">
+            <text class="score">{{item.rating.average}}</text>
+        </view>
+        <!--遍历数组取值的方法-->
+        <!--<view>
+            <text class="movie-tag-item" wx:for="{{item.genres}}" wx:for-item="itemName">
+                {{itemName}}
+            </text>
+        </view>  -->
+    </view>
+</scroll-view>

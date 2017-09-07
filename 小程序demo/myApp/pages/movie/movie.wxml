@@ -1,0 +1,70 @@
+<scroll-view scroll-y="true" class="scroll-bd">
+	<view class="top-banner">
+		<view class="top-background" style="background-image: url({{movie.images.large}});"></view>
+		<image src="{{movie.images.large}}" class="movie-pic"></image>
+		<view class="movie-intro">
+            <view class="movie-title">{{movie.title}}</view>
+            <view class="movie-intro-txt">导演：{{movie.directors[0].name}}</view>
+            <view class="movie-intro-txt" >演员：
+                <block wx:for="{{movie.casts}}" wx:for-item="movieCastItem" wx:for-index="movieCastIndex" wx:key="movieCastItem">
+                    {{movieCastItem.name}}
+                    <block wx:if="{{movieCastIndex !== movie.casts.length - 1}}">/</block>
+                </block>
+            </view>
+            <view class="movie-intro-txt">豆瓣评分：
+                <block wx:if="{{movie.rating.average == 0}}">
+                    暂无评分
+                </block>
+                <block wx:else>
+                    {{movie.rating.average}}分
+                </block>
+            </view>
+            <view class="movie-intro-txt">上映年份：{{movie.year}}年</view>
+        </view>
+	</view>
+    <!--电影数据-->
+    <view class="movie-data">
+        <view class="movie-data-item">
+            <view class="movie-data-num">{{movie.collect_count}}</view>
+            <view class="movie-data-title">看过</view>
+        </view>
+        <view class="movie-data-item">
+            <view class="movie-data-num">{{movie.wish_count}}</view>
+            <view class="movie-data-title">想看</view>
+        </view>
+        <view class="movie-data-item">
+            <view class="movie-data-num">{{movie.ratings_count}}</view>
+            <view class="movie-data-title">评分人数</view>
+        </view>
+    </view>
+    <!--剧情介绍-->
+    <view class="movie-bd">
+        <view class="movie-bd-title">剧情简介</view>
+        <view class="movie-bd-intro">{{movie.summary}}</view>
+        <view class="movie-bd-title">导演/演员</view>
+        <view class="movie-bd-person">
+            <!--导演照片信息区-->
+            <!--点击导演照片时查看该导演的基本信息 => 给每个子单元绑定tap事件，传入id进入相应的详情页-->
+            <view class="movie-bd-person-item" data-id="{{movie.directors[0].id}}" bindtap="personDetail">
+                <image class="movie-bd-person-avatar" src="{{!movie.directors[0].avatars ? '' : movie.directors[0].avatars.medium}}"></image>
+                <view class="movie-bd-person-name">{{movie.directors[0].name}}</view>
+                <view class="movie-bd-person-role">导演</view>
+            </view>
+            <!--演员信息编辑区-->
+            <block wx:for="{{movie.casts}}" wx:for-item="movieCastItem" wx:key="{{movieCastItem.id}}">
+            <!--点击演员照片时查看该演员的基本信息 => 给每个子单元绑定tap事件，传入id进入相应的详情页-->
+                <view class="movie-bd-person-item" data-id="{{movieCastItem.id}}" bindtap="personDetail">
+                    <image class="movie-bd-person-avatar" src="{{!movieCastItem.avatars ? '' : movieCastItem.avatars.medium}}"></image>
+                    <view class="movie-bd-person-name">{{movieCastItem.name}}</view>
+                    <view class="movie-bd-person-role">演员</view>
+                </view>
+            </block>
+        </view>
+        <view class="movie-bd-title">标签</view>
+        <view class="movie-bd-tag">
+            <block wx:for="{{movie.genres}}" wx:for-item="movieTagItem" wx:key="movieTagItem">
+                <view class="movie-bd-tag-item" data-tag="{{movieTagItem}}" catchtap="tagTap">{{movieTagItem}}</view>
+            </block>
+        </view>
+    </view>
+</scroll-view>
