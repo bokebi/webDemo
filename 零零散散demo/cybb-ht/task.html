@@ -184,12 +184,23 @@
 			if(onOff){
 				$('.mask').show();
 				$('.sel_layer').addClass('show_layer');
+				$('body').css({
+					'height': '100%',
+					'overflow': 'hidden'
+				})
 			}else{
 				$('.mask').hide();
 				$('.sel_layer').removeClass('show_layer');
+				$('body').css({
+					'height': 'auto',
+					'overflow': ''
+				})
 			}
 			onOff = !onOff;
+
 		});
+
+		
 
 	});
 	</script>
