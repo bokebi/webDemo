@@ -178,11 +178,11 @@
 		var onOff = true;
 		$('.accordion').find('h4').click(function(){
 			if(onOff){
-				$(this).next('dl').slideDown('fast');
-				$(this).find('span').html('▲')
-			}else{
 				$(this).next('dl').slideUp('fast');
-				$(this).find('span').html('▼')
+				$(this).find('span').html('▼');
+			}else{
+				$(this).next('dl').slideDown('fast');
+				$(this).find('span').html('▲');
 			}
 			onOff = !onOff;
 		});
